@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.autoservice.app" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <provider
+            android:authorities="com.autoservice.app.AutoDBOpenHelper"
+            android:name=".AutoDBProvider">
+        </provider>
+        <provider
+            android:authorities="com.autoservice.app.BookingDBOpenHelper"
+            android:name=".BookingDBProvider">
+        </provider>
+        <activity
+            android:name="com.autoservice.app.MainMenu"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.autoservice.app.AutoList"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.autoservice.app.NewCar"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.autoservice.app.AutoSearch"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.autoservice.app.AutoInfo"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:name="com.autoservice.app.NewBooking"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+
+</manifest>
